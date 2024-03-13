@@ -30,12 +30,11 @@ namespace WinForms_Slut_uppgift
             sw = File.CreateText(docpath);
             MessageBox.Show(docpath);
             List<FlowLayoutPanel> questions = MainLayOutPanel.Controls.OfType<FlowLayoutPanel>().ToList();
-            for(int i = 0; i < questions.Count(); i++)
+            for(int i = 0; i < questions.Count; i++)
             {
-                string key = i + 1 + ". ";
-                FlowLayoutPanel question = questions[i];
-                List<RadioButton> RadButtons = MainLayOutPanel.Controls.OfType<RadioButton>().ToList();
-                for (int j = 0; j < RadButtons.Count(); j++)
+                string key = questions[i].Name + ". ";
+                List<RadioButton> RadButtons = questions[i].Controls.OfType<RadioButton>().ToList();
+                for (int j = 0; j < RadButtons.Count; j++)
                 {
                     if (RadButtons[j].Checked)
                     {
