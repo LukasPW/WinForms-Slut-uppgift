@@ -603,7 +603,7 @@
             this.radioButton29.Size = new System.Drawing.Size(256, 67);
             this.radioButton29.TabIndex = 1;
             this.radioButton29.TabStop = true;
-            this.radioButton29.Text = "Mangden transistorer i ett chip växer exponentiellt och dubblas vare 2 år";
+            this.radioButton29.Text = "Mängden transistorer i ett chip växer exponentiellt och dubblas varje 2 år";
             this.radioButton29.UseVisualStyleBackColor = true;
             // 
             // radioButton30
