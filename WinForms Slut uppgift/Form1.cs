@@ -11,24 +11,70 @@ namespace WinForms_Slut_uppgift
         }
         
 
-        private void ProvhanterarenLabel_Click(object sender, EventArgs e)
+        private void ProvhanterarenLabel_Click(object sender, EventArgs e)// Dont know how to remove these
         {
-            //time I messed up
+            //time I messed up :)
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             //time I messed up
+            /*
+                             .-----.
+                            / 7.  (
+                           /   .-.  \
+                          /   /   \  \
+                         / `  )()
+                        / `   )   ).  \
+                      .'  _.   \_/  . |
+     .--.           .' _.' )`.        |
+    (    `---...._.'   `---.'_)    ..  \
+     \            `----....___    `. \  |
+      `.           _---- - _   `._  )/  |
+        `.       / "  \   /"  \`.  `._ |
+          `.    ((O)` ) ((O)` ) `.   `._\
+            `--'`---'   `---' )  `.    `-.
+               /                  ` \      `-.
+             .'                      `.       `.
+            /                     `  ` `.       `-.
+     .--.   \ ===._____.======. `    `   `. .___.--`     .''''.
+    ' .` `-. `.                )`. `   ` ` \          .'. '  8)
+   (8.  ` `-.`.               ( .  ` `  .`\      .'  '    ' /
+    \  `. `    `-.               ) ` .   ` ` \  .'   '.  '  /
+     \ ` `.  ` . \`.    .--.     |  ` ) `   .``/ '  // .  /
+      `.  ``. .   \ \   .-- `.  (  ` / _   ` . / ' .  ' /   .'
+        `. ` \  `  \ \  '-.   `-'.'  `-.  `   .  .' /  .'
+          \ `.`.  ` \ \    ) /`._.`       `.  ` .  .'  /
+    LGB |  `.`. . \ \  (.'               `.   .'.'
+        __ / .. \ \ ` ) \                     \.' .. \__
+ .-._.- '     '"  ) .-'   `.                   (  '"     `-._.--.
+(_________.-==== ' / .' /\_)`--..__________..-- `==== -._________)
+                 (.'(.'
+            */
         }
 
         private void MainLayOutPanel_Paint(object sender, PaintEventArgs e)
         {
             //time I messed up
+            /*
+                      .--._.--.
+          ( O     O )
+          /   . .   \
+         .`._______.'.
+        /(           )\
+      _/  \  \   /  /  \_
+   .~   `  \  \ /  /  '   ~.
+  {    -.   \  V  /   .-    }
+_ _`.    \  |  |  |  /    .'_ _
+>_       _} |  |  | {_       _<
+ /. - ~ ,_-'  .^.  `-_, ~ - .\
+         '-'|/   \|`-`
+            */
         }
 
         private void ReturnTest_Click(object sender, EventArgs e)
         {
-            sw = File.CreateText(FacitDocPath);
+            sw = File.CreateText(FacitDocPath); //Creates an answer sheet, the answers are written below
             sw.WriteLine("1. " + "Skapa liv");
             sw.WriteLine("2. " + "Det som står i binär");
             sw.WriteLine("3. " + "Översätter till datorns språk");
@@ -45,22 +91,22 @@ namespace WinForms_Slut_uppgift
             sw.Close();
             sw = File.CreateText(docpath);
             MessageBox.Show(docpath);
-            List<FlowLayoutPanel> questions = MainLayOutPanel.Controls.OfType<FlowLayoutPanel>().ToList();
+            List<FlowLayoutPanel> questions = MainLayOutPanel.Controls.OfType<FlowLayoutPanel>().ToList();//Searches through the main panel to find the where all the questions
             for(int i = 0; i < questions.Count; i++)
             {
                 string key = questions[i].Name + ". ";
-                List<RadioButton> RadButtons = questions[i].Controls.OfType<RadioButton>().ToList();
+                List<RadioButton> RadButtons = questions[i].Controls.OfType<RadioButton>().ToList();//Serches through all the qestions to find and check what buttons are checked by the user
                 for (int j = 0; j < RadButtons.Count; j++)
                 {
-                    if (RadButtons[j].Checked)
+                    if (RadButtons[j].Checked)//this is the part that looks if the buttons are checked
                     {
                         key += RadButtons[j].Text;
-                        sw.WriteLine(key);
+                        sw.WriteLine(key);//saves the cheked buttons to a .txt file
                     }
 
                 }
             }
-            sw.WriteLine("9. " + textBox1.Text);
+            sw.WriteLine("9. " + textBox1.Text); //saves all the textbox answes to the same .txt file
             sw.WriteLine("10. " + textBox2.Text);
             sw.WriteLine("11. " + textBox3.Text);
             sw.WriteLine("12." + textBox4.Text);
